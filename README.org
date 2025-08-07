@@ -1,0 +1,52 @@
+#+TITLE: Samples of .NET's IL code
+#+DATE: [2025-08-06 Wed]
+
+** About
+
+This repository contains some simple programs written directly in .NET's
+intermediary language. Check the references section to know where this all comes
+from.
+
+** .NET compilation process
+
+#+BEGIN_SRC mermaid
+  flowchart LR
+    csharp_code[C# code]
+    csharp_compiler[C# compiler]
+    fsharp_code[F# code]
+    fsharp_compiler[F# compiler]
+    vb_code[Visual Basic Code]
+    vb_compiler[Visual Basic Compiler]
+    cil["`CIL/MSIL code
+            Intermediary language
+`"]
+    clr["`CLR
+            Common Language Runtime
+`"]
+    jit[JIT compiler]
+    cpu[CPU]
+
+    csharp_code --> csharp_compiler
+    fsharp_code --> fsharp_compiler
+    vb_code --> vb_compiler
+    csharp_compiler --> cil
+    fsharp_compiler --> cil
+    vb_compiler --> cil
+    cil --> clr
+    clr --> jit
+    jit --> cpu
+#+END_SRC
+
++ Disclaimer: nowadays we can compile .NET code into native ahead-of-time code,
+  which produces an app that's self-contained. Native AOT apps don't use a
+  just-in-time (JIT) compiler when the application runs. For more information,
+  check the reference [3]. The process presented by this diagram is commonly
+  known as managed execution process [4].
+
+** References
+
+- [1] Where I found about the ~ilproj~: [[https://stackoverflow.com/a/75711303][link]].
+- [2] ~.NET/C# internals. Advanced .NET techniques~. YouTube playlist from Tural
+  Suleymani: [[https://www.youtube.com/watch?v=ki66eCCgVXk&list=PLEwbUt9nLeIE8UB2fUfS24krxJcv78uka][link]].
+- [3] ~Native AOT deployment~. Microsoft docs: [[https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot][link]].
+- [4] ~Managed execution process~. Microsoft docs: [[https://learn.microsoft.com/en-us/dotnet/standard/managed-execution-process][link]].
