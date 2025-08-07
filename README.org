@@ -23,7 +23,7 @@ from.
     clr["`CLR
             Common Language Runtime
 `"]
-    jit[JIT compiler]
+    jit>JIT compiler]
     cpu[CPU]
 
     csharp_code --> csharp_compiler
@@ -32,7 +32,7 @@ from.
     csharp_compiler --> cil
     fsharp_compiler --> cil
     vb_compiler --> cil
-    cil --> clr
+    cil -- run program --> clr
     clr --> jit
     jit --> cpu
 #+END_SRC
@@ -45,8 +45,8 @@ from.
 
 ** References
 
-- [1] Where I found about the ~ilproj~: [[https://stackoverflow.com/a/75711303][link]].
-- [2] ~.NET/C# internals. Advanced .NET techniques~. YouTube playlist from Tural
-  Suleymani: [[https://www.youtube.com/watch?v=ki66eCCgVXk&list=PLEwbUt9nLeIE8UB2fUfS24krxJcv78uka][link]].
-- [3] ~Native AOT deployment~. Microsoft docs: [[https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot][link]].
-- [4] ~Managed execution process~. Microsoft docs: [[https://learn.microsoft.com/en-us/dotnet/standard/managed-execution-process][link]].
+- [1] - Where I found about the ~ilproj~: [[https://stackoverflow.com/a/75711303][link]].
+- [2] - /.NET/C# internals. Advanced .NET techniques/. YouTube playlist from
+  Tural Suleymani: [[https://www.youtube.com/watch?v=ki66eCCgVXk&list=PLEwbUt9nLeIE8UB2fUfS24krxJcv78uka][link]].
+- [3] - /Native AOT deployment/. Microsoft docs: [[https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot][link]].
+- [4] - /Managed execution process/. Microsoft docs: [[https://learn.microsoft.com/en-us/dotnet/standard/managed-execution-process][link]].
