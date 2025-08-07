@@ -1,9 +1,9 @@
-#+TITLE: Samples of .NET's IL code
+#+TITLE: Samples of .NET's CIL code
 #+DATE: [2025-08-06 Wed]
 
 ** About
 
-This repository contains some simple programs written directly in .NET's
+This repository contains some simple programs written directly in .NET's common
 intermediary language. Check the references section to know where this all comes
 from.
 
