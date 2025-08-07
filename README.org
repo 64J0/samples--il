@@ -3,8 +3,8 @@
 
 ** About
 
-This repository contains some simple programs written directly in .NET's common
-intermediary language. Check the references section to know where this all comes
+This repository contains some simple programs written directly in .NET's [[https://en.wikipedia.org/wiki/Common_Intermediate_Language][common
+intermediary language]]. Check the references section to know where this all comes
 from.
 
 ** .NET compilation and execution process
